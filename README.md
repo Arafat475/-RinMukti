@@ -79,4 +79,3 @@ a loan and need honest, clear information in Bangla before making that decision.
 ---
 
 *Built by MD Arafat Hossain Bayzid.
-*Dedicated to the families who deserved better information before they borrowed.*
