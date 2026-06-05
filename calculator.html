@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ক্যালকুলেটর — RinMukti</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="calculator-page">
+
+        <nav class="navbar">
+  <a href="index.html" class="nav-logo">ঋণমুক্তি — RinMukti</a>
+  <div class="nav-links">
+    <a href="index.html">হোম</a>
+    <a href="calculator.html">ক্যালকুলেটর</a>
+    <a href="quiz.html">কুইজ</a>
+  </div>
+</nav>
+       <!-- CALCULATOR HERO -->
+<div class="calc-hero">
+  <h1>ঋণ হিসাব</h1>
+  <p>Loan Calculator — Know the real cost before you borrow</p>
+</div>
+
+        <div class="calculator">
+
+            <div class="calc-step">
+  <div class="step-dot active"></div>
+  <div class="step-dot"></div>
+  <div class="step-dot"></div>
+  <div class="step-dot"></div>
+  <span class="step-text">ঋণের তথ্য দিন — Enter loan details</span>
+</div>
+
+  <div class="field">
+    <span class="label-bn">ঋণের ধরন</span>
+    <span class="label-en">Loan Type</span>
+    <select id="loanType">
+      <option value="bank">Bank Loan</option>
+      <option value="ngo">NGO / MFI Loan</option>
+      <option value="personal">Personal Loan</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <span class="label-bn">ঋণের পরিমাণ</span>
+    <span class="label-en">Loan Amount (Taka)</span>
+    <input type="number" id="amount" placeholder="e.g. 50000">
+  </div>
+
+  <div class="field">
+    <span class="label-bn">বার্ষিক সুদের হার</span>
+    <span class="label-en">Annual Interest Rate (%)</span>
+    <input type="number" id="rate" placeholder="e.g. 20">
+  </div>
+
+  <div class="field">
+    <span class="label-bn">ঋণের মেয়াদ</span>
+    <span class="label-en">Loan Term (Months)</span>
+    <input type="number" id="month" placeholder="e.g. 24">
+  </div>
+
+  <button onclick="calculate()">হিসাব করুন — Calculate</button>
+
+</div>
+
+        
+        
+        <!-- RESULTS SECTION -->
+<div id="results">
+
+  <h2 class="results-title">আপনার ঋণের বিবরণ
+    <span>Your Loan Breakdown</span>
+  </h2>
+
+  <div class="results-grid">
+
+    <div class="result-card blue">
+      <p class="result-label">মাসিক কিস্তি</p>
+      <p class="result-sublabel">Monthly EMI</p>
+      <p class="result-value" id="emi">—</p>
+    </div>
+
+    <div class="result-card red">
+      <p class="result-label">মোট সুদ</p>
+      <p class="result-sublabel">Total Interest</p>
+      <p class="result-value" id="totalinterest">—</p>
+    </div>
+
+    <div class="result-card dark">
+      <p class="result-label">মোট পরিশোধ</p>
+      <p class="result-sublabel">Total Repayment</p>
+      <p class="result-value" id="totalpayment">—</p>
+    </div>
+
+    <div class="result-card orange">
+      <p class="result-label">অতিরিক্ত খরচ</p>
+      <p class="result-sublabel">Extra Cost</p>
+      <p class="result-value" id="extracost">—</p>
+    </div>
+
+  </div>
+
+  <!-- WARNING POPUP -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-card">
+
+    <div class="popup-header">
+      ⚠️ বিপদ সংকেত!
+      <span>Danger Alert</span>
+    </div>
+
+    <p class="popup-bn">আপনি যে সুদের হারে ঋণ নিতে যাচ্ছেন সেটি অত্যন্ত বিপজ্জনক। বাংলাদেশের অনেক NGO এবং MFI এই হারে ঋণ দিয়ে পরিবারগুলোকে বছরের পর বছর ঋণের ফাঁদে আটকে রাখে।</p>
+
+    <p class="popup-en">The interest rate you are about to borrow at is dangerously high. Many NGOs and MFIs in Bangladesh use rates like this to trap families in debt for years.</p>
+
+    <div class="popup-fact">
+      <span id="popupFactBn">আপনি ধার করছেন কিন্তু ফেরত দিচ্ছেন আরও বেশি।</span>
+      <span id="popupFactEn">You are borrowing but paying back much more.</span>
+    </div>
+
+    <div class="popup-buttons">
+      <button class="btn-reconsider" onclick="closePopup()">✅ পুনরায় ভাবব — Let me reconsider</button>
+      <button class="btn-proceed" onclick="proceedAnyway()">তারপরও নিতে চাই — Proceed anyway</button>
+    </div>
+
+  </div>
+</div>
+
+</div>
+        <script src="script.js"></script>
+
+        <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">ঋণমুক্তি — RinMukti</div>
+      <p class="footer-tagline">ঋণ নেওয়ার আগে জানুন — Know before you borrow</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">হোম</a>
+      <a href="calculator.html">ক্যালকুলেটর</a>
+      <a href="quiz.html">কুইজ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ঋণমুক্তি — RinMukti · বাংলাদেশের মানুষের জন্য তৈরি</p>
+  </div>
+</footer>
+    </body>
+</html>
