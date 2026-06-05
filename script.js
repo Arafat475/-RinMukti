@@ -33,6 +33,24 @@ function calculate() {
     smoothScrollTo("results");
   }
 
+  // Show share section
+  document.getElementById("shareSection").style.display = "block";
+
+  // Build share message
+  var shareText = "ঋণমুক্তি — RinMukti হিসাব:\n" +
+    "ঋণের পরিমাণ: ৳" + amount + "\n" +
+    "মাসিক কিস্তি: ৳" + emi + "\n" +
+    "মোট পরিশোধ: ৳" + totalpayment + "\n" +
+    "অতিরিক্ত খরচ: " + extracost + "%\n\n" +
+    "ঋণ নেওয়ার আগে হিসাব করুন: https://arafat475.github.io/-RinMukti/";
+
+  document.getElementById("whatsappShare").href =
+    "https://wa.me/?text=" + encodeURIComponent(shareText);
+
+  document.getElementById("facebookShare").href =
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+    encodeURIComponent("https://arafat475.github.io/-RinMukti/");
+
 }
 
 function closePopup() {

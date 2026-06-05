@@ -4,6 +4,7 @@
     <head>
         <title>ক্যালকুলেটর — RinMukti</title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body class="calculator-page">
 
@@ -13,6 +14,9 @@
     <a href="index.html">হোম</a>
     <a href="calculator.html">ক্যালকুলেটর</a>
     <a href="quiz.html">কুইজ</a>
+    <a href="danger.html">ঝুঁকি সতর্কতা</a>
+    <a href="stories.html">আসল গল্প</a>
+    <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">EN</button>
   </div>
 </nav>
        <!-- CALCULATOR HERO -->
@@ -99,8 +103,7 @@
     </div>
 
   </div>
-
-  <!-- WARNING POPUP -->
+<!-- WARNING POPUP -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup-card">
 
@@ -126,9 +129,21 @@
   </div>
 </div>
 
+<!-- SHARE SECTION -->
+<div class="share-section" id="shareSection" style="display:none;">
+  <p class="share-label">এই ফলাফল শেয়ার করুন — Share this result</p>
+  <div class="share-buttons">
+    <a id="whatsappShare" href="#" target="_blank" class="share-btn whatsapp">
+      📲 WhatsApp-এ শেয়ার করুন
+    </a>
+    <a id="facebookShare" href="#" target="_blank" class="share-btn facebook">
+      📘 Facebook-এ শেয়ার করুন
+    </a>
+  </div>
+</div>
+
 </div>
         <script src="script.js"></script>
-
         <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-top">
@@ -137,14 +152,13 @@
       <p class="footer-tagline">ঋণ নেওয়ার আগে জানুন — Know before you borrow</p>
     </div>
     <div class="footer-links">
-      <a href="index.html">হোম</a>
-      <a href="calculator.html">ক্যালকুলেটর</a>
-      <a href="quiz.html">কুইজ</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 ঋণমুক্তি — RinMukti · বাংলাদেশের মানুষের জন্য তৈরি</p>
-  </div>
+  <a href="index.html">হোম</a>
+  <a href="calculator.html">ক্যালকুলেটর</a>
+  <a href="quiz.html">কুইজ</a>
+  <a href="danger.html">ঝুঁকি সতর্কতা</a>
+  <a href="stories.html">আসল গল্প</a>
+</div>
 </footer>
+<script src="lang.js"></script>
     </body>
 </html>
